@@ -1,3 +1,4 @@
+import os
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
@@ -104,5 +105,6 @@ def calculate():
 
     return render_template('result.html', result=result)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10000))  # Get the port from the environment variable, default to 10000
+    app.run(host="0.0.0.0", port=port)
