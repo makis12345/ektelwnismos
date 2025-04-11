@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Tax Calculator</title>
+</head>
+<body>
+    <h1>Car Tax Calculator - Υπολογισμός τελωνείου</h1>
+    <form method="POST" action="/calculate">
+        <label for="cc">Engine Capacity - Κυβισμός (cc):</label>
+        <input type="number" name="cc" id="cc" required><br><br>
+
+        <label for="co2">CO2 Emissions - Ρύποι (g/km):</label>
+        <input type="number" name="co2" id="co2" required><br><br>
+
+        <label for="fuel_type">Fuel Type - Καύσιμο:</label>
+        <select name="fuel_type" id="fuel_type" required>
+            <option value="petrol">Petrol</option>
+            <option value="diesel">Diesel</option>
+            <option value="petrol/electric">Petrol/Electric</option>
+            <option value="diesel/electric">Diesel/Electric</option>
+        </select><br><br>
+
+        <label for="purchase_price">Purchase Price - Τιμή αγοράς (€):</label>
+        <input type="number" name="purchase_price" id="purchase_price" required><br><br>
+
+        <label for="is_new">Is the car new - Καινούριο?</label>
+        <input type="checkbox" name="is_new" id="is_new"><br><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+</body>
+</html>
